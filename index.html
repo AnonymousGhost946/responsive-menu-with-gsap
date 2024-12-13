@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap responsive menu bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .main {
+        position: relative;
+     
+    }
+
+    .header {
+        height: 100vh;
+        width: 100%;
+        background-color: #213141;
+        color: white;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        background-image: url(img.jpg);
+        background-position:center;background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo{font-size: 25px;}
+
+    .logo,
+    i {
+        padding: 10px 30px;
+        font-size: 25px;
+    }
+
+    i {
+        color: white;
+    }
+
+    .menu {
+        position: absolute;
+        top: 50;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        background-color: #2121217a;
+        backdrop-filter: blur(15px);
+        padding-top: 50px;
+        z-index: 10;
+    }
+    #cross{position: absolute;top: -4px;right: -2.5px;font-size: 25px;color: black;background-color: #fff;}
+    .menu h5 {
+        margin: 25px 20px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .menu h5:hover{cursor: pointer;text-decoration: underline;}
+</style>
+
+<body>
+    <div class="main"></div>
+    <div class="header">
+        <div class="logo">Gsap responsive menu bar</div>
+        <i class="ri-menu-2-line"></i>
+        <div class="menu">
+            <h5>Home</h5>
+            <h5>Service</h5>
+            <h5>Blogs</h5>
+            <h5>About</h5>
+            <h5>Contact us</h5>
+            <i id="cross" class="ri-close-fill"></i>
+        </div>
+    </div>
+</body>
+
+<script src="/scritp.js"></script>
+</html>
